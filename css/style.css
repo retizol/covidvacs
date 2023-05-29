@@ -1,0 +1,1122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+body{
+    background: rgb(255, 255, 255);
+	background-color: #F6F6F2 /*#d8f4ff*/; /*bg color-all*/
+    color: rgb(6, 34, 53);
+    overflow-x: hidden;
+	z-index: 3;
+	position: relative;
+	padding-bottom: 58px;
+	min-height: 100vh;
+}
+/*nav*/
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #388087 /*#28527A*/;/*nav color */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 50px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;/*nav logo color*/
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;/*nav pages color*/
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+nav input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1155px){
+  nav{
+    padding: 0 10px 0 80px;
+  }
+}
+@media (max-width: 1023px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #8AC4D0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.6s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.7s ease;
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+@media (max-width: 720px){
+  nav{
+    padding: 0 10px 0 60px;
+  }
+}
+/*END OF nav*/
+
+
+
+/*START OF HOME*/
+.home_main{
+	display: flex;
+	height: 400px;
+	width: 100%;
+	background: #BADFE7 /*#42D1FC*/; /*home-top bg color*/
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.home_main{
+	padding: 0 200px;
+}
+.home_main h2{
+	margin: 0 0;
+	color: #388087 /*#fff*/; /*home-top font color*/
+	font-size: 2rem;
+}
+.home_main p{
+	margin: 5px 0 0 0;
+	font-size: 1.2rem;
+}
+.home_main span{
+	font-size: 1.3rem;
+	color: orangered;
+}
+.home_main a{
+	margin: 0 auto;
+	background: #6FB3B8/*#6161E7*/;/*button bg color*/
+	color:  #FFF; /*button font color*/
+	padding: 1rem 2rem;
+	border-radius: 2.5rem;
+	border-style: none;
+	font-size: 1rem;
+	font-weight: 100;
+	letter-spacing: 0.7px;
+}
+.navFaq{
+	width: 100%;
+	margin: 20px 0 50px 0;
+	padding: 0 200px;
+}
+.navFaq h2{
+	color: #000; /*FAQ question font color*/
+	margin: 10px 0;
+	font-size: 1.2rem;
+}
+.navExpandable{
+	overflow: hidden;
+	text-decoration-color: #000;/*FAQ font color*/
+	line-height: 1.5rem;
+	transition: all 0.8s ease-in-out;
+	max-height: 0;
+	scroll-behavior: smooth;
+ }
+.navExpandable:target {
+	max-height: 700px;
+
+
+}
+.navExpandable p{
+	font-size: 1.1rem;
+}
+@media (max-width: 1024px){
+	.home_main{
+		height: 350px;
+		padding: 0 17px;	
+	}
+	.home_main h2{
+		font-size: 1.4rem;
+	}
+	.home_main p, span{
+		font-size: 1rem;
+	}
+	.home_main a{
+	
+		padding: 1rem;
+		border-radius: 1.8rem;
+		border-style: none;
+		font-size: 0.8rem;
+		font-weight: 100;
+		letter-spacing: 0.5px;
+	}
+	.navFaq{
+		padding: 10px 17px;
+	}
+}
+/*END OF HOME*/
+/*LOGIN*/
+nav .logo2{
+	text-align: center;
+	color: #fff; /*nav logo color same as logo before*/
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.loginbox{
+	text-align: center;
+	margin:  20px;
+}
+.loginbox p{
+	padding: 1rem;
+	font-size: 1.2rem;
+}
+.loginbox form{
+	background-color: #BADFE7/*gray*/; /*login form bg*/
+	width: 400px;
+	padding: 20px;
+	border-radius: 5px;
+}
+.loginbox #userlog, #passlog{
+	border-radius: 5px;
+	border-style: none;
+	outline: 0;
+	padding: 0.4rem 0.6rem;
+	width: 65%;
+	height: 2.2rem;
+	font-size: 0.9rem;
+}
+.loginbox #signin{
+	padding: 0.3rem 1.3rem;
+	border-radius: 5px;
+	width: 65%;
+	border-style: none;
+}
+.loginbox a{
+	text-decoration: none;
+	color: maroon;
+}
+@media (max-width: 1155px){
+ #nav2{
+    padding: 0 10px 0 10px;
+  }
+}
+@media (max-width: 1100px){
+	#nav2{
+		padding: 0 10px 0 10px;
+	}
+	.loginbox form{
+	width: 300px;
+	padding: 20px;
+	border-radius: 5px;
+	}
+	.loginbox p{
+	padding: 1rem;
+	font-size: 1.1rem;
+	}
+	.loginbox #userlog, #passlog{
+	padding: 0.3rem 0.4rem;
+	width: 70%;
+	height: 1.9rem;
+	font-size: 0.9rem;
+	}
+	.loginbox #signin{
+	padding: 0.3rem 1.3rem;
+	width: 65%;
+	}
+}
+
+/*LOGIN*/
+
+/*REGISTRATION*/
+
+.regContainer{
+  width: 100%;
+  margin: 0 auto;
+}
+.regContainer form{
+	background: #BADFE7/*reg bg color*/;
+	padding: 2.3rem 0.5rem;
+	border-radius: 0.3rem;
+ }
+@media(min-width: 576px){
+  .regContainer{
+    max-width: 540px;
+  }
+}
+@media(min-width: 768px){
+  .regContainer{
+    max-width: 720px
+  }
+}
+.regHeader{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.regHeader h1{
+	font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+}
+#description{
+  font-weight: 200;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#consent{
+	font-size: 1rem;
+}
+.form-input{
+   margin: 0 2.5rem 1.2rem 2rem;
+}
+.form-input-size {
+   display: block;
+   width: 100%;
+   height: 1.9rem;
+   padding: 0.3rem 0.4rem;
+   border-radius: 0.2rem;
+   outline: 0;
+   border-style: none;
+   margin-top: 0.4rem;  
+}
+.regContainer p{
+ font-size: 1.12rem;
+}
+.form-input-size input{
+ margin-right: 0.5rem;
+ min-height: 1.1rem;
+ min-width: 1.2rem;
+}
+.form-input label{
+ display: block;
+ align-items: center;
+ font-size: 1.125rem;
+ margin-top: 0.2rem;
+ margin-bottom: 0.5rem;
+}
+.regContainer textarea{
+ width: 100%;
+ min-height: 4rem;
+ resize: vertical;
+ padding: 0.5rem 0 0 0.5rem;
+}
+.regContainer button{
+ width: 100%;
+ padding: 0.8rem;
+ background: #6FB3B8 ;
+ color: black;
+ border-radius: 0.2rem;
+ cursor: pointer;
+ border: none;
+}
+.date {
+   display: inline-block;
+   width: 24%;
+   height: 1.5rem;
+   padding: 0.3rem 0.4rem;
+   border-radius: 0.1rem;
+   outline: 0;
+   border-style: none; 
+	margin-bottom: 5px;
+}
+.register{
+	margin-right: 5px;
+}
+.csched{
+	margin-left: 5px;
+}
+/*REGISTRATION*/
+
+/*COVID-19 TRACKER*/
+.containerTracker{
+	margin: 50px 0;
+}
+.ph p, #country{
+	text-align: center;
+	color: #28527A;
+	font-size: 2.5rem;
+	font-weight: 800;
+}
+.tracker{
+	text-align: center;
+}
+.confirmed{
+	display: inline-block;
+	text-align: center;
+	margin: 0 40px 0 0;
+}
+.recover{
+	display: inline-block;
+	text-align: center;
+}
+.death{
+	display: inline-block;
+	text-align: center;
+	margin: 0 0 0 40px;
+}
+#cases, #recovered, #deaths{
+	font-size: 3rem;
+	font-weight: 600;
+}
+#cases, #todayCases{
+	color: #1377EF;
+}
+#recovered, #todayRecovered{
+	color: #2CC84C;
+}
+#deaths, #todayDeaths{
+	color: #E84245;
+}
+.caseRate{
+	text-align: center;
+	margin: 50px 0;
+}
+.recRate{
+	display: inline-block;
+	text-align: center;
+	padding: 0 10px 0 0;
+}
+.dedRate{
+	display: inline-block;
+	text-align: center;
+	padding:  0 0 0 10px;
+}
+#recoverRate, #deathRate{
+	font-size: 2rem;
+	font-weight: 100; 
+}
+.caseThird{
+	text-align: center;
+	margin: 20px 0 0 0;
+}
+.critRate{
+	display: inline-block;
+	text-align: left;
+	padding: 0 20px 0 0;
+}
+.actRate{
+	display: inline-block;
+	text-align: left;
+	padding:  0 0 0 10px;
+}
+.casePerMil{
+	display: inline-block;
+	text-align: left;
+	padding:  0 0 0 20px;
+}
+#active, #critical, #casesPerOneMillion{
+	font-size: 2rem;
+	font-weight: 100; 
+}
+
+@media screen and (max-width: 768){
+	.ph p, #country{
+		font-size: 2rem;
+	}
+	.confirmed{
+		display: inline-block;
+		margin: 0 10px 0 0;
+	}
+	.recover{
+		display: inline-block;
+		text-align: center;
+	}
+	.death{
+		display: inline-block;
+		text-align: center;
+		margin: 0 0 0 10px;
+	}
+	#cases, #recovered, #deaths{
+		font-size: 2rem;
+	}
+	.caseRate{
+		text-align: center;
+		margin: 50px 0;
+	}
+	.recRate{
+		display: inline-block;
+		text-align: center;
+		padding: 0 10px 0 0;
+	}
+	.dedRate{
+		display: inline-block;
+		text-align: center;
+		padding:  0 0 0 10px;
+	}
+	#recoverRate, #deathRate{
+		font-size: 1.5rem;
+		font-weight: 100; 
+	}
+	.caseThird{
+		text-align: center;
+		margin: 20px 20px;
+	}
+	.critRate{
+		display: block;
+		text-align: center;
+		padding: 0 0 20px 0;
+	}
+	.actRate{
+		display: block;
+		text-align: center;
+		padding: 0 0 20px 0;
+	}
+	.casePerMil{
+		display: block;
+		text-align: center;
+		padding: 0;
+	}
+	#active, #critical, #casesPerOneMillion{
+		font-size: 1.5rem;
+		font-weight: 100; 
+	}
+
+}
+
+@media screen and (max-width: 480px){
+	.ph p, #country{
+		font-size: 2rem;
+	}
+	.confirmed{
+		display: block;
+		margin: 0 0 20px;
+	}
+	.recover{
+		display: block;
+		text-align: center;
+		margin: 0 0 20px;
+	}
+	.death{
+		display: block;
+		text-align: center;
+		margin: 0 0 20px;
+	}
+	#cases, #recovered, #deaths{
+		font-size: 2rem;
+	}
+	.caseRate{
+		text-align: center;
+		margin: 50px 0;
+	}
+	.recRate{
+		display: inline-block;
+		text-align: center;
+		padding: 0 10px 0 0;
+	}
+	.dedRate{
+		display: inline-block;
+		text-align: center;
+		padding:  0 0 0 10px;
+	}
+	#recoverRate, #deathRate{
+		font-size: 1.5rem;
+		font-weight: 100; 
+	}
+	.caseThird{
+		text-align: center;
+		margin: 20px 20px;
+	}
+	.critRate{
+		display: block;
+		text-align: center;
+		padding: 0 0 20px 0;
+	}
+	.actRate{
+		display: block;
+		text-align: center;
+		padding: 0 0 20px 0;
+	}
+	.casePerMil{
+		display: block;
+		text-align: center;
+		padding: 0;
+	}
+	#active, #critical, #casesPerOneMillion{
+		font-size: 1.5rem;
+		font-weight: 100; 
+	}
+
+}
+
+}
+/*@media screen and (max-width: 500px){
+
+}*/
+
+/*END OF COVID-19 TRACKER*/
+
+/*START OF INFO*/
+.info{
+	width: 100%;
+	padding: 0 150px 10px;
+}
+.titleCov{
+	text-align: center;
+}
+.tCovid{
+	display: inline-block;
+	color: #073664;
+	font-size: 3rem;
+	font-weight: 900;
+}
+.tVacc{
+	background-color: #0099f9;
+	color: white;
+	padding: 0 10px;
+	font-size: 3rem;
+	font-weight: 900;
+}
+.t101{
+	display: inline-block;
+	color: #073664;
+	margin: auto;
+	font-size: 10rem;
+	font-weight: 900;
+}
+.info h3{
+	text-align: center;
+	color: #305669;
+	font-size: 1.4rem;
+	padding: 0 150px 20px;
+	font-weight: 100;
+}
+.infotable{
+	width: 100%;
+	padding: 0 150px;
+}
+.infotable div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 100%;
+	padding: 0 150px;
+}
+.infotable div.gallery:hover {
+	border: 1px solid #777;
+}
+.infotable div.gallery img {
+	width: 100%;
+	height: auto;
+}
+.infotable div.desc {
+	padding: 15px;
+	text-align: center;
+	color: #305669;
+	font-size: 1.1rem;
+}
+.infotable h1{
+	background-color: #8AC4D0;
+	padding: 20px;
+	color: white;
+	line-height: 1;
+}
+.infotable h2{
+	color: #305669;
+	padding: 10px 20px;
+}
+.infotable p{
+	padding: 10px;
+	color: #305669;
+	font-size: 1.1rem;
+}
+.infotable ul{ 
+	list-style: none;
+	width: 100%;
+	border: 0;
+}
+.infotable li{
+	color: #305669;
+}
+.infotable ul li::before{
+	content: "\2022";
+	color: #BC3032;
+	display: inline-block;
+	width: 1rem;
+}
+.trsecond{
+	vertical-align: top;
+}
+.td1{
+	width: 50px;
+}
+.td2{
+	width: 100px;
+}
+
+
+@media (max-width: 1024px){
+	.info{
+		padding: 0 50px 10px;
+}
+	.tCovid{
+	color: #073664;
+	font-size: 2rem;
+	font-weight: 900;
+}
+	.tVacc{
+	background-color: #0099f9;
+	color: white;
+	padding: 0 10px;
+	font-size: 2rem;
+	font-weight: 900;
+}
+	.t101{
+	color: #073664;
+	margin: auto;
+	font-size: 6rem;
+	font-weight: 900;
+}
+	.info h3{
+		text-align: center;
+		padding: 0 0 20px;
+		font-size: 1.2rem;
+}
+	.infotable{
+		width: 100%;
+		padding: 0 50px;
+}
+	.infotable h1{
+		padding: 15px;
+		font-size: 0.9rem;
+}
+	.infotable h2{
+		padding: 8px 20px;
+}
+	.infotable p{
+		padding: 10px;
+		font-size: 1rem;
+}
+	.infotable ul{ 
+		width: 100%;
+		border: 0;
+}
+	
+}
+@media (max-width: 480px){
+	.info{
+		padding: 10px;
+	}
+	.info h3{
+		text-align: justify;
+	}
+	.infotable{
+		padding: 0;
+	}
+	.infotable p{
+		padding: 20px;
+	}
+	
+	/*.trsecond{
+		visibility: hidden;
+		margin: 0;
+		width: 0;
+		height: 0;
+		padding: 0;
+	}
+	.td1{
+		visibility: hidden;
+		margin: 0;
+		width: 0;
+		height: 0;
+		padding: 0;
+	}
+	.td2{
+		visibility: hidden;
+		margin: 0;
+		width: 0;
+		height: 0;
+		padding: 0;
+	}*/
+
+}
+/*END OF INFO*/
+
+
+/*START OF PROFILE*/
+.vaccContainer{
+	/*width: 40%;*/
+	text-align: center;
+	/*background-color: red;*/
+	margin: 25px 0;
+}
+.schedBanner{
+	text-align: left;
+	width: 40vw;
+	height: 280px;
+	padding: 15px 30px;
+	border-radius: 10px;
+	background-color: white; /*vaccine info */
+	color: #000; /*vaccine font color*/
+}
+.schedBanner h2{
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+.schedBanner h3, span{
+	font-size: 1rem;
+	padding: 0 0 3px 0;
+}
+
+.profileMain{
+	/*width: 71%;*/
+	/*background-color: red;*/
+	margin-bottom: 50px;
+}
+.profileContainer{
+	text-align:left;
+	width: 67vw;
+	/*margin: 15px 15px 50px;*/
+	padding: 50px 40px;
+	background-color: #BADFE7 /*#28527A*/;/*profile info*/
+	color: black /*#fff*/; /*profile font color*/
+	border-radius: 10px;
+}
+.profileContainer h1{
+	font-size: 1.7rem;
+}
+.profileContainer p{
+	font-size: 1rem;
+	padding: 5px 0 10px;
+}
+.profileContainer label{
+	font-size: 1.2rem;
+}
+#phplastname{
+	display: inline-block;
+	margin: 0 100px 0 0;
+	min-width: 150px;
+	max-width: 150px;
+}
+#phpfirstname{
+	display: inline-block;
+	margin: 0 100px 0 0;
+	min-width: 200px;
+	max-width: 250px;
+}
+#phpmiddle{
+	display: inline-block;
+	min-width: 90px;
+	max-width: 90px;
+}
+
+#lastname,#firstname,#middleinit{
+	font-size: 0.8rem;
+}
+#lastname{
+	display: inline-block;
+	margin: 0 50px 0 0;
+	min-width: 200px;
+	max-width: 250px;
+}
+#firstname{
+	display: inline-block;
+	margin: 0 100px 0 0;
+	min-width: 200px;
+	max-width: 250px;
+}
+#middleinit{
+	display: inline-block;
+	min-width: 90px;
+	max-width: 90px;
+}
+.sProfile{
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	margin: 0;
+}
+#sphplastname{
+	display: block;
+	margin: 0 100px 0 0;
+	min-width: 150px;
+	max-width: 150px;
+}
+#sphpfirstname{
+	display: block;
+	margin: 0 100px 0 0;
+	min-width: 200px;
+	max-width: 250px;
+}
+#sphpmiddle{
+	display: block;
+	min-width: 90px;
+	max-width: 90px;
+}
+
+#slastname,#sfirstname,#smiddleinit{
+	font-size: 0.8rem;
+}
+#slastname{
+	display: block;
+	margin: 0 50px 0 0;
+	min-width: 200px;
+	max-width: 250px;
+}
+#sfirstname{
+	display: block;
+	margin: 0 100px 0 0;
+	min-width: 200px;
+	max-width: 250px;
+}
+#smiddleinit{
+	display: block;
+	min-width: 90px;
+	max-width: 90px;
+}
+
+
+@media (max-width: 1023px){
+	.vaccContainer{
+		margin: 0;
+	}
+	.schedBanner{
+		border-radius: 0;
+		width: 100%;
+		height: 290px;
+		padding: 25px 30px 15px;
+	}
+	.sProfile{
+		visibility: hidden;
+		height: 0;
+		width: 0;
+	}
+	.profileMain{
+		margin-bottom: 50px;
+	}
+	.profileContainer{
+		text-align:left;
+		width: 100%;
+		padding: 30px 20px;
+		border-radius: 0;
+	}
+	.profileContainer h1{
+		font-size: 1.3rem;
+	}
+	.profileContainer p{
+		font-size: 1rem;
+		padding: 5px 0 10px;
+	}
+	.profileContainer label{
+		font-size: 1.1rem;
+		font-weight: 600;
+	}
+	#phplastname{
+		margin: 0 20px 0 0;
+		min-width: 80px;
+		max-width: 80px;
+	}
+	#phpfirstname{
+		margin: 0 20px 0 0;
+		min-width: 150px;
+		max-width: 150px;
+	}
+	#phpmiddle{
+		min-width: 50px;
+		max-width: 50px;
+	}
+
+	#lastname,#firstname,#middleinit{
+		font-size: 0.8rem;
+	}
+	#lastname{
+		margin: 0 20px 0 0;
+		min-width: 80px;
+		max-width: 80px;
+	}
+	#firstname{
+		margin: 0 90px 0 0;
+		min-width: 80px;
+		max-width: 80px;
+	}
+	#middleinit{
+		min-width: 50px;
+		max-width: 50px;
+	}
+}
+
+@media (max-width: 480px){
+	.lProfile{
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+	#phplastname{
+		margin: 0;
+		width: 0;
+		height: 0;
+	}
+	#phpfirstname{
+		margin:0;
+		width: 0;
+		height: 0;
+	}
+	#phpmiddle{
+		width: 0;
+		height: 0;
+	}
+
+	#lastname,#firstname,#middleinit{
+		font-size: 0.8rem;
+	}
+	#lastname{
+		margin: 0;
+		width: 0;
+		height: 0;
+	}
+	#firstname{
+		margin: 0;
+		width: 0;
+		height: 0;
+	}
+	.sProfile{
+		visibility: visible;
+		padding: 0;
+	}
+	.schedBanner{
+		border-radius: 0;
+		width: 100%;
+		height: 320px;
+		padding: 25px 20px 15px;
+	}
+
+	#sphplastname{
+		display: block;
+		margin: 0;
+		min-width: 80px;
+		max-width: 80px;
+	}
+	#sphpfirstname{
+		display: block;
+		margin: 0;
+		min-width: 150px;
+		max-width: 150px;
+	}
+	#sphpmiddle{
+		display: block;
+		min-width: 50px;
+		max-width: 50px;
+	}
+	#slastname,#sfirstname,#smiddleinit{
+		font-size: 0.8rem;
+	}
+	#slastname{
+		margin: 0;
+		min-width: 80px;
+		max-width: 80px;
+	}
+	#sfirstname{
+		margin: 0;
+		min-width: 80px;
+		max-width: 80px;
+	}
+	#smiddleinit{
+		min-width: 50px;
+		max-width: 50px;
+	}
+	.lowerInfo{
+		padding-top: 180px;
+	}
+}
+
+/*END OF PROFILE*/
+
+
+/*FOOTER*/
+footer {
+	text-align: center;
+	text-decoration: none;
+	background-color: #388087/*#28527A*/;
+	color: #fff;
+	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+footer a{
+	color: white;
+}
+footer a:hover {
+		color: black;
+}
+/*FOOTER*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
